@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of, tap } from 'rxjs';
-import { Info } from '../models/model/info';
 
 @Injectable({
   providedIn: 'root',
@@ -21,12 +20,12 @@ export class ApiService {
     );
   }
 
-  getUserById(id: number): Observable<Info[]> {
+  getUserById(id: number): Observable<any[]> {
     const cacheKey = `user-${id}`; // Unique key for individual user data
     if (this.cache.has(cacheKey)) {
       return of(this.cache.get(cacheKey)); // Return cached data if available
     }
-    return this.http.get<Info[]>(`https://reqres.in/api/users/${id}`).pipe(
+    return this.http.get<any[]>(`https://reqres.in/api/users/${id}`).pipe(
       tap((response) => this.cache.set(cacheKey, response)) // Cache with unique key
     );
   }
