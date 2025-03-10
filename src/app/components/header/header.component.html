@@ -1,0 +1,18 @@
+<mat-toolbar [dir]="dir">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>{{ "Maids" | translate }}</span>
+  <span class="example-spacer"></span>
+  <input
+  type="text"
+  class="form-control input-h"
+  [(ngModel)]="searchTerm"
+  (input)="onSearchChange()"
+  placeholder="{{ 'userId' | translate }}"
+/>
+  <button  (click)="toggleLanguage()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>language</mat-icon>
+  </button>
+</mat-toolbar>
+

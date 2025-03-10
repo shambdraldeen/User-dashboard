@@ -1,0 +1,15 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+mat-toolbar{
+  background-color: rgb(19, 73, 73);
+  color: white;
+}
+.input-h {
+  background-image: url('../../../assets/Images/fi_search.png');
+  background-position: 10px 8px;
+  width: 200px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  border: none;
+}

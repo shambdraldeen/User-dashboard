@@ -1,0 +1,16 @@
+<div  *ngIf="!isLoading" class="user-detail mx-auto mt-4">
+  <mat-card class="detail-card">
+    <img class="avatar-large" [src]="user?.avatar" [alt]="'Photo of ' + user?.first_name" />
+    <mat-card-content class="content-center">
+      <p><strong>{{"id" | translate}}:</strong> {{ user?.id }}</p>
+      <h5>{{ user?.first_name }} {{ user?.last_name }}</h5>
+      <p>{{ user?.email }}</p>
+    </mat-card-content>
+  </mat-card>
+
+  <button mat-button routerLink="/" class="back-button">{{'back' | translate}}</button>
+</div>
+
+<div *ngIf="isLoading" class="fa-spinner-container">
+  <i class="fas fa-spinner fa-spin fa-2x"></i>
+</div>

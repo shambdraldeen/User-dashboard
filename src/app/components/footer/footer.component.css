@@ -1,0 +1,27 @@
+mat-toolbar {
+  background-color: rgb(19, 73, 73);
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+span {
+  font-size: 1.5rem;
+}
+
+span {
+  font-size: 1rem;
+  font-family: sans-serif;
+  color: white;
+}
+
+i {
+  font-size: 1.5rem;
+  padding: 5px;
+  color: white;
+}
+
+.fa:hover {
+  color:rgb(202, 189, 189);
+  cursor: pointer;
+}
